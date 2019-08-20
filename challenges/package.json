@@ -1,0 +1,14 @@
+{
+    "name": "challenges",
+    "version": "0.0.1",
+    "description": "Playground for challenges in node.js",
+    "scripts": {
+        "test": "nyc mocha --reporter spec"
+    },
+    "private": true,
+    "devDependencies": {
+        "expect": "^24.9.0",
+        "mocha": "^6.2.0",
+        "nyc": "^14.1.1"
+    }
+}
