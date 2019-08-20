@@ -1,6 +1,6 @@
 /* jshint esversion: 8 */
 
-exports.sockMerchant = function sockMerchant (n, ar) {
+exports.sockMerchant = function (n, ar) {
   var unpairedFoundSocks = new Set();
   var pairsFound = 0;
   for (let i = 0; i < ar.length && i < n; i++) {
