@@ -35,7 +35,15 @@ describe('Molybdenum: Find possible leaders', function () {
 
     possibleLeaders.should.eql([]);
   });
-  it('if there are multiple ways of choosing a segment to turn some number into a leader, then this particular number should appear in an output array only once');
+  it('if there are multiple ways of choosing a segment to turn some number into a leader, then this particular number should appear in an output array only once', function () {
+    var A = [2, 2, 3, 3, 2, 2];
+    var K = 2;
+    var M = 5;
+
+    var possibleLeaders = molybdenum.solution(K, M, A);
+
+    possibleLeaders.should.eql([2, 3]);
+  });
 });
 
 describe('Molybdenum: leader of an array', function () {
