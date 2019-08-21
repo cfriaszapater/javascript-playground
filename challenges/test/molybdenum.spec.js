@@ -17,7 +17,15 @@ describe('Molybdenum: Find possible leaders', function () {
 
     possibleLeaders.should.eql([2, 3]);
   });
-  it('The returned array should be sorted in ascending order');
+  it('The returned array should be sorted in ascending order', function () {
+    var A = [3, 3, 2, 2, 1, 1];
+    var K = 2;
+    var M = 5;
+
+    var possibleLeaders = molybdenum.solution(K, M, A);
+
+    possibleLeaders.should.eql([2, 3]);
+  });
   it('if there is no number that can become a leader, you should return an empty array', function () {
     var A = [1, 3, 5];
     var K = 1;

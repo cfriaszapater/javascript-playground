@@ -14,7 +14,7 @@ function solution (kSegmentLength, maxElementValue, array) {
   }
   //   console.log('increasedArray:', increasedArray);
 
-  var leaders = [];
+  var leaders = new Set();
   // for each possible segment
   for (let i = 0; i <= N - kSegmentLength; i++) {
     // concat array: previous + segment (increased elements) + remaining
@@ -26,11 +26,11 @@ function solution (kSegmentLength, maxElementValue, array) {
 
     var foundLeader = leader(candidateArray);
     if (foundLeader) {
-      leaders.push(foundLeader);
+      leaders.add(foundLeader);
     }
   }
 
-  return leaders;
+  return Array.from(leaders).sort((firstEl, secondEl) => firstEl - secondEl);
 }
 
 // value that occurs in more than half of the elements of the array
