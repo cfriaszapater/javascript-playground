@@ -4,7 +4,6 @@ function solution (kSegmentLength, maxElementValue, array) {
   // N and M are integers within the range [1..100,000];
   // K is an integer within the range [1..N];
   // each element of array A is an integer within the range [1..M].
-//   console.log('array:', array);
 
   const N = array.length;
 
@@ -12,7 +11,6 @@ function solution (kSegmentLength, maxElementValue, array) {
   for (let i = 0; i < increasedArray.length; i++) {
     increasedArray[i]++;
   }
-  //   console.log('increasedArray:', increasedArray);
 
   var leaders = new Set();
   // for each possible segment
@@ -22,7 +20,6 @@ function solution (kSegmentLength, maxElementValue, array) {
     var segment = increasedArray.slice(i, i + kSegmentLength);
     var remaining = array.slice(i + kSegmentLength, N);
     var candidateArray = previous.concat(segment).concat(remaining);
-    // console.log('candidateArray:', candidateArray);
 
     var foundLeader = leader(candidateArray);
     if (foundLeader) {
