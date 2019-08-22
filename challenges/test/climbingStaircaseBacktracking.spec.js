@@ -6,7 +6,7 @@ require('chai').should();
 
 const climbingStaircaseBacktracking = require('../climbingStaircaseBacktracking');
 
-describe('Backtracking - Find all possible solutions to climb stair with 1..k steps each jump', function () {
+describe('Backtracking - Climb stair with 1..k steps each jump - Find all possible solutions', function () {
   it('should be ok given n=0, k=0', function () {
     climbingStaircaseBacktracking.climbingStaircase(0, 0).should.eql([[]]);
   });
