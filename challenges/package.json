@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Playground for challenges in node.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "private": true,
   "devDependencies": {
