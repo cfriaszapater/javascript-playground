@@ -1,13 +1,23 @@
-exports.commonCharacterCount = function(string1, string2) {
+exports.commonCharacterCount = function commonCharacterCount(string1, string2) {
   let commonChars = 0;
   let string2RemainingChars = string2;
   for (let i = 0; i < string1.length; i++) {
     const char = string1.charAt(i);
-    if (string2RemainingChars.includes(char)) {
+    let charIndexInString2 = string2RemainingChars.indexOf(char);
+    if (charIndexInString2 >= 0) {
       commonChars++;
-      string2RemainingChars =
-        string2RemainingChars.slice(0, i) + string2RemainingChars.slice(i + 1);
+      string2RemainingChars = removeCharFromString(
+        string2RemainingChars,
+        charIndexInString2
+      );
     }
   }
   return commonChars;
 };
+
+function removeCharFromString(string2RemainingChars, charIndexInString2) {
+  return (
+    string2RemainingChars.slice(0, charIndexInString2) +
+    string2RemainingChars.slice(charIndexInString2 + 1)
+  );
+}
