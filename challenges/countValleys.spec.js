@@ -1,6 +1,6 @@
 /* jshint esversion: 8 */
 
-const countValleys = require("../countValleys");
+const countValleys = require("./countValleys");
 
 describe("count valleys", function() {
   it("should return 1 valley", function() {

@@ -1,6 +1,6 @@
 /* jshint esversion: 8 */
 
-const molybdenum = require("../molybdenum");
+const molybdenum = require("./molybdenum");
 
 describe("Molybdenum: Find possible leaders", function() {
   it("should return 2,3", function() {

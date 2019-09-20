@@ -1,6 +1,6 @@
 /* jshint esversion: 8 */
 
-const repeatedString = require("../repeatedString");
+const repeatedString = require("./repeatedString");
 
 describe("Count occurrences of 'a' in inifinitely repeating string up to 'n' character", function() {
   it("should return 7", function() {

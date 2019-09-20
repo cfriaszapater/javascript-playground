@@ -1,6 +1,6 @@
 /* jshint esversion: 8 */
 
-const jumpingOnClouds = require("../jumpingOnClouds");
+const jumpingOnClouds = require("./jumpingOnClouds");
 
 describe("Jumping on clouds", function() {
   it("should return 3 jumps", function() {

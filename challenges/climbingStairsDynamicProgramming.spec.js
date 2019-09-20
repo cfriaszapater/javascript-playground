@@ -1,6 +1,6 @@
 /* jshint esversion: 8 */
 
-const climbingStairs = require("../climbingStairsDynamicProgramming");
+const climbingStairs = require("./climbingStairsDynamicProgramming");
 
 describe("Dynamic programming - Find how many different ways to climb stairs with steps of 1 or 2", function() {
   it("Should return 3", function() {

@@ -1,6 +1,6 @@
 /* jshint esversion: 8 */
 
-const nQueensBacktracking = require("../nQueensBacktracking");
+const nQueensBacktracking = require("./nQueensBacktracking");
 
 describe("Backtracking - N-queens problem - Find all possible solutions", function() {
   it("should be ok given n=0", function() {

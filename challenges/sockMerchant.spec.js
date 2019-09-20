@@ -1,6 +1,6 @@
 /* jshint esversion: 8 */
 
-const sockMerchant = require("../sockMerchant");
+const sockMerchant = require("./sockMerchant");
 
 describe("calculate number of matching pairs of socks", function() {
   it("should return 2 matching pairs of socks on short array", function() {

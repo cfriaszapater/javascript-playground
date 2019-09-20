@@ -1,6 +1,6 @@
 /* jshint esversion: 8 */
 
-const climbingStaircaseBacktracking = require("../climbingStaircaseBacktracking");
+const climbingStaircaseBacktracking = require("./climbingStaircaseBacktracking");
 
 describe("Backtracking - Climb stair with 1..k steps each jump - Find all possible solutions", function() {
   it("should be ok given n=0, k=0", function() {

@@ -1,6 +1,6 @@
 /* jshint esversion: 8 */
 
-const houseRobber = require("../houseRobber");
+const houseRobber = require("./houseRobber");
 
 describe("Dynamic programming - Determine the maximum sum of non-adjacent elements", function() {
   it("should be 0 given empty array", function() {
