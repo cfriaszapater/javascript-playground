@@ -19,8 +19,8 @@ Write an efficient algorithm for the following assumptions:
 */
 
 exports.solution = function solution(A, B, K) {
-  numDivisorsOfB = numDivisors(B, K);
-  numDivisorsBelowA = numDivisors(A - 1, K);
+  const numDivisorsOfB = numDivisors(B, K);
+  const numDivisorsBelowA = numDivisors(A - 1, K);
   return numDivisorsOfB - numDivisorsBelowA;
 };
 
