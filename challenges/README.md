@@ -13,3 +13,9 @@ npm install
 ```sh
 npm test
 ```
+
+## Lint
+
+```sh
+npm run lint
+```

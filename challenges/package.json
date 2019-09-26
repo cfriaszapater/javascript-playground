@@ -3,10 +3,13 @@
   "version": "0.0.1",
   "description": "Playground for challenges in node.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "lint": "./node_modules/.bin/eslint *.js"
   },
   "private": true,
   "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-plugin-jest": "^22.17.0",
     "jest": "^24.9.0"
   }
 }
