@@ -4,7 +4,20 @@ describe("Number of disc intersections - Sorting - Codility", () => {
   it("test 1", () => {
     expect(maxProductOfThree.solution([1, 5, 2, 1, 4, 0])).toBe(11);
   });
+
+  it("should return −1 if the number of intersecting pairs exceeds 10,000,000", () => {
+    const A = fillWithI(10000);
+    expect(maxProductOfThree.solution(A)).toBe(-1);
+  });
 });
+
+function fillWithI(n) {
+  const A = new Array(n);
+  for (let i = 0; i < A.length; i++) {
+    A[i] = i;
+  }
+  return A;
+}
 
 describe("internal functions", () => {
   it("discs", () => {

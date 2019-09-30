@@ -140,9 +140,15 @@ function countCollisions(discsByMaxPoint, prefixSumMaxPoints, maxPointsCount) {
   for (let i = 0; i < discsByMaxPoint.length; i++) {
     const disc = discsByMaxPoint[i];
     collisions += collisionsWithLower(disc, prefixSumMaxPoints);
+    if (collisions > 10000000) {
+      return -1;
+    }
   }
   for (const point of maxPointsCount.keys()) {
     collisions += collisionsAtThisPoint(point, maxPointsCount);
+    if (collisions > 10000000) {
+      return -1;
+    }
   }
   return collisions;
 }
