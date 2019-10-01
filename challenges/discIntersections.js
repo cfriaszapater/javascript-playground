@@ -140,15 +140,13 @@ function countCollisions(discsByMaxPoint, prefixSumMaxPoints, maxPointsCount) {
   for (let i = 0; i < discsByMaxPoint.length; i++) {
     const disc = discsByMaxPoint[i];
     collisions += collisionsWithLower(disc, prefixSumMaxPoints);
-    if (collisions > 10000000) {
-      return -1;
-    }
   }
   for (const point of maxPointsCount.keys()) {
     collisions += collisionsAtThisPoint(point, maxPointsCount);
-    if (collisions > 10000000) {
-      return -1;
-    }
+  }
+
+  if (collisions > 10000000) {
+    return -1;
   }
   return collisions;
 }
@@ -161,7 +159,22 @@ function collisionsWithLower(disc, prefixSumMaxPoints) {
 }
 
 function collisionsAtThisPoint(point, maxPointsCount) {
-  return maxPointsCount.get(point) - 1;
+  const m = maxPointsCount.get(point);
+  if (m > 2) {
+    return factorial(m) / (2 * factorial(m - 2));
+  } else if (m === 2) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+function factorial(m) {
+  let result = 1;
+  for (let i = m; i >= 1; i--) {
+    result = result * i;
+  }
+  return result;
 }
 
 class MapWithSearch extends Map {
@@ -221,3 +234,4 @@ exports.collisionsWithLower = collisionsWithLower;
 exports.collisionsAtThisPoint = collisionsAtThisPoint;
 exports.reverse = reverse;
 exports.MapWithSearch = MapWithSearch;
+exports.factorial = factorial;
