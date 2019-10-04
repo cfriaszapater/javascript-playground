@@ -72,8 +72,10 @@ exports.removeKFromList = function removeKFromList(l, k) {
 };
 
 function ListNode(x) {
-  this.value = x;
-  this.next = null;
+  return {
+    value: x,
+    next: null
+  };
 }
 
 function listFromArray(a) {
@@ -81,10 +83,10 @@ function listFromArray(a) {
   let current;
   a.forEach(element => {
     if (!root) {
-      root = new ListNode(element);
+      root = ListNode(element);
       current = root;
     } else {
-      current.next = new ListNode(element);
+      current.next = ListNode(element);
       current = current.next;
     }
   });
